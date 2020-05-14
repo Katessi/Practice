@@ -18,7 +18,6 @@ namespace Practice.ViewModels
 
         public MainWindowViewModel()
         {
-            //TODO: Может переименовать Task на Lesson
             Menu = new List<MenuGroup>()
             {
                 new MenuGroup{ Title = "Главная", MenuItems =
@@ -26,36 +25,36 @@ namespace Practice.ViewModels
                         new MenuItem { Title="Все задания" }
                     }
                 },
-                new MenuGroup{ Title = "Задание 1", MenuItems =
+                new MenuGroup{ Title = "Занятие 1", MenuItems =
                     new List<MenuItem>{
-                        new MenuItem { Title="Пример 1", TargetType = typeof(Pages.Task1.Example1) }
+                        new MenuItem { Title="Пример 1", TargetType = typeof(Pages.Lesson1.Example1) }
                     }
                 },
-                new MenuGroup{ Title = "Задание 2", MenuItems =
+                new MenuGroup{ Title = "Занятие 2", MenuItems =
                     new List<MenuItem>{
-                        new MenuItem { Title="Пример 1", TargetType = typeof(Pages.Task2.Example1) },
-                        new MenuItem { Title="Пример 2", TargetType = typeof(Pages.Task2.Example2) },
-                        new MenuItem { Title="Пример 3", TargetType = typeof(Pages.Task2.Example3) },
-                        new MenuItem { Title="Пример 4", TargetType = typeof(Pages.Task2.Example4) },
-                        new MenuItem { Title="Задание 1", TargetType = typeof(Pages.Task2.FinalTask) },
+                        new MenuItem { Title="Пример 1", TargetType = typeof(Pages.Lesson2.Example1) },
+                        new MenuItem { Title="Пример 2", TargetType = typeof(Pages.Lesson2.Example2) },
+                        new MenuItem { Title="Пример 3", TargetType = typeof(Pages.Lesson2.Example3) },
+                        new MenuItem { Title="Пример 4", TargetType = typeof(Pages.Lesson2.Example4) },
+                        new MenuItem { Title="Задание 1", TargetType = typeof(Pages.Lesson2.FinalTask) },
                     }
                 },
-                new MenuGroup{ Title = "Задание 3", MenuItems =
+                new MenuGroup{ Title = "Занятие 3", MenuItems =
                     new List<MenuItem>{
-                        new MenuItem { Title="Пример 1", TargetType = typeof(Pages.Task3.Example1) },
-                        new MenuItem { Title="Пример 2", TargetType = typeof(Pages.Task3.Example2) },
-                        new MenuItem { Title="Задание 1", TargetType = typeof(Pages.Task3.FinalTask1) },
-                        new MenuItem { Title="Задание 2", TargetType = typeof(Pages.Task3.FinalTask2) }
+                        new MenuItem { Title="Пример 1", TargetType = typeof(Pages.Lesson3.Example1) },
+                        new MenuItem { Title="Пример 2", TargetType = typeof(Pages.Lesson3.Example2) },
+                        new MenuItem { Title="Задание 1", TargetType = typeof(Pages.Lesson3.FinalTask1) },
+                        new MenuItem { Title="Задание 2", TargetType = typeof(Pages.Lesson3.FinalTask2) }
                     }
                 },
-                new MenuGroup{ Title = "Задание 4", MenuItems =
+                new MenuGroup{ Title = "Занятие 4", MenuItems =
                     new List<MenuItem>{
-                        new MenuItem { Title="Пример 1", TargetType = typeof(Pages.Task3.Example1) },
-                        new MenuItem { Title="Пример 2", TargetType = typeof(Pages.Task3.Example1) },
-                        new MenuItem { Title="Задание 1", TargetType = typeof(Pages.Task3.FinalTask1) },
-                        new MenuItem { Title="Задание 2", TargetType = typeof(Pages.Task3.FinalTask1) },
-                        new MenuItem { Title="Задание 3", TargetType = typeof(Pages.Task3.FinalTask1) },
-                        new MenuItem { Title="Задание 4", TargetType = typeof(Pages.Task3.FinalTask1) },
+                        //new MenuItem { Title="Пример 1", TargetType = typeof(Pages.Lesson4.Example1) },
+                        //new MenuItem { Title="Пример 2", TargetType = typeof(Pages.Lesson4.Example1) },
+                        //new MenuItem { Title="Задание 1", TargetType = typeof(Pages.Lesson4.FinalTask1) },
+                        //new MenuItem { Title="Задание 2", TargetType = typeof(Pages.Lesson4.FinalTask2) },
+                        //new MenuItem { Title="Задание 3", TargetType = typeof(Pages.Lesson4.FinalTask3) },
+                        //new MenuItem { Title="Задание 4", TargetType = typeof(Pages.Lesson4.FinalTask4) },
                     }
                 }
             };

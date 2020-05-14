@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Practice.Pages.Task2
+namespace Practice.Pages.Lesson3
 {
     /// <summary>
-    /// Interaction logic for Example5.xaml
+    /// Interaction logic for Example2.xaml
     /// </summary>
-    public partial class Example5 : Page
+    public partial class Example2 : Page
     {
-        public Example5()
+        public Example2()
         {
             InitializeComponent();
         }

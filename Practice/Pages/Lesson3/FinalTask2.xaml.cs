@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Practice.Pages.Task3
+namespace Practice.Pages.Lesson3
 {
     /// <summary>
     /// Interaction logic for FinalTask2.xaml

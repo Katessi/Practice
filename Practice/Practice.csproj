@@ -60,40 +60,40 @@
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task1\Example1.xaml.cs">
+    <Compile Include="Pages\Lesson1\Example1.xaml.cs">
       <DependentUpon>Example1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task2\Example5.xaml.cs">
+    <Compile Include="Pages\Lesson2\Example5.xaml.cs">
       <DependentUpon>Example5.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task2\Example1.xaml.cs">
+    <Compile Include="Pages\Lesson2\Example1.xaml.cs">
       <DependentUpon>Example1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task2\Example2.xaml.cs">
+    <Compile Include="Pages\Lesson2\Example2.xaml.cs">
       <DependentUpon>Example2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task2\Example3.xaml.cs">
+    <Compile Include="Pages\Lesson2\Example3.xaml.cs">
       <DependentUpon>Example3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task2\Example4.xaml.cs">
+    <Compile Include="Pages\Lesson2\Example4.xaml.cs">
       <DependentUpon>Example4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task2\FinalTask.xaml.cs">
+    <Compile Include="Pages\Lesson2\FinalTask.xaml.cs">
       <DependentUpon>FinalTask.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task3\AboutPage.xaml.cs">
+    <Compile Include="Pages\Lesson3\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task3\Example1.xaml.cs">
+    <Compile Include="Pages\Lesson3\Example1.xaml.cs">
       <DependentUpon>Example1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task3\Example2.xaml.cs">
+    <Compile Include="Pages\Lesson3\Example2.xaml.cs">
       <DependentUpon>Example2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task3\FinalTask1.xaml.cs">
+    <Compile Include="Pages\Lesson3\FinalTask1.xaml.cs">
       <DependentUpon>FinalTask1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Task3\FinalTask2.xaml.cs">
+    <Compile Include="Pages\Lesson3\FinalTask2.xaml.cs">
       <DependentUpon>FinalTask2.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -108,51 +108,51 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task1\Example1.xaml">
+    <Page Include="Pages\Lesson1\Example1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task2\Example5.xaml">
+    <Page Include="Pages\Lesson2\Example5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task2\Example1.xaml">
+    <Page Include="Pages\Lesson2\Example1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task2\Example2.xaml">
+    <Page Include="Pages\Lesson2\Example2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task2\Example3.xaml">
+    <Page Include="Pages\Lesson2\Example3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task2\Example4.xaml">
+    <Page Include="Pages\Lesson2\Example4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task2\FinalTask.xaml">
+    <Page Include="Pages\Lesson2\FinalTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task3\AboutPage.xaml">
+    <Page Include="Pages\Lesson3\AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task3\Example1.xaml">
+    <Page Include="Pages\Lesson3\Example1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task3\Example2.xaml">
+    <Page Include="Pages\Lesson3\Example2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task3\FinalTask1.xaml">
+    <Page Include="Pages\Lesson3\FinalTask1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Task3\FinalTask2.xaml">
+    <Page Include="Pages\Lesson3\FinalTask2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,13 +188,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pages\Task4\" />
-    <Folder Include="Pages\Task5\" />
-    <Folder Include="Pages\Task6\" />
-    <Folder Include="Pages\Task7\" />
-    <Folder Include="Pages\Task8\" />
-    <Folder Include="Pages\Task9\" />
-    <Folder Include="Pages\TaskX\" />
+    <Folder Include="Pages\Lesson4\" />
+    <Folder Include="Pages\Lesson5\" />
+    <Folder Include="Pages\Lesson6\" />
+    <Folder Include="Pages\Lesson7\" />
+    <Folder Include="Pages\Lesson8\" />
+    <Folder Include="Pages\Lesson9\" />
+    <Folder Include="Pages\LessonX\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
