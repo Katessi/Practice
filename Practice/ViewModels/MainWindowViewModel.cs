@@ -13,10 +13,25 @@ namespace Practice.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
-        public List<MenuGroup> Menu { get; set; }
-        public List<MenuItem> MenuWithoutGroup { get; set; }
+        private List<MenuGroup> menu;
+
+        public List<MenuGroup> Menu
+        {
+            get { return menu; }
+            set
+            {
+                menu = value;
+                OnPropertyChanged("Menu");
+            }
+        }
 
         public MainWindowViewModel()
+        {
+            LoadData();
+        }
+
+        //TODO: Изменить способ загрузки меню
+        public void LoadData()
         {
             Menu = new List<MenuGroup>()
             {
@@ -144,18 +159,9 @@ namespace Practice.ViewModels
                     }
                 }
             };
-
-            foreach (var item in Menu)
-            {
-                if (MenuWithoutGroup == null)
-                    MenuWithoutGroup = new List<MenuItem>();
-
-                MenuWithoutGroup.AddRange(item.MenuItems);
-            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
         void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             if (PropertyChanged == null)

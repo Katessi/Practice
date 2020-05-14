@@ -69,6 +69,23 @@ namespace Practice.Windows
             if ((sender as CheckBox).IsChecked == true)
             {
                 //TODO: Немного изменить модельку чтобы тут работало
+                var MainWindowViewModel = new MainWindowViewModel();
+                //MainWindowViewModel.Menu = MainWindowViewModel.Menu.Where(x => x.MenuItems.Select(y => y.Title.));
+                //Возможно нужно переписать на linq
+                var newMenu = new List<MenuGroup>();
+                foreach (var menuGroup in MainWindowViewModel.Menu)
+                {
+                    var newGroup = new MenuGroup();
+                    foreach (var menuItem in menuGroup.MenuItems)
+                    {
+                        if (menuItem.Title.Contains("Задание"))
+                        {
+                            newGroup.MenuItems.Add(menuItem);
+                        }
+                    }
+                    newMenu.Add(newGroup);
+                }
+                MainWindowViewModel.Menu = newMenu;
             }
         }
     }
