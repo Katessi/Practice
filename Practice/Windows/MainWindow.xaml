@@ -25,23 +25,26 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
-        <DataGrid
-            x:Name="TasksDataGrid"
-            Width="200"
-            AutoGenerateColumns="False"
-            CanUserResizeColumns="False"
-            CanUserResizeRows="False"
-            ColumnWidth="*"
-            HeadersVisibility="None"
-            HorizontalScrollBarVisibility="Hidden"
-            IsReadOnly="True"
-            ItemsSource="{Binding MenuWithoutGroup}"
-            SelectionChanged="TasksDataGrid_SelectionChanged"
-            SelectionMode="Single">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Title}" Header="Название" />
-            </DataGrid.Columns>
-            <!--<DataGrid.GroupStyle>
+        <StackPanel Width="200">
+            <Label Content="Меню в разработке" />
+
+            <DataGrid
+                x:Name="TasksDataGrid"
+                VerticalAlignment="Stretch"
+                AutoGenerateColumns="False"
+                CanUserResizeColumns="False"
+                CanUserResizeRows="False"
+                ColumnWidth="*"
+                HeadersVisibility="None"
+                HorizontalScrollBarVisibility="Hidden"
+                IsReadOnly="True"
+                ItemsSource="{Binding MenuWithoutGroup}"
+                SelectionChanged="TasksDataGrid_SelectionChanged"
+                SelectionMode="Single">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Title}" Header="Название" />
+                </DataGrid.Columns>
+                <!--<DataGrid.GroupStyle>
                 <GroupStyle>
                     <GroupStyle.ContainerStyle>
                         <Style TargetType="{x:Type GroupItem}">
@@ -58,8 +61,8 @@
                                                 </DataTemplate>
                                             </ItemsControl.ItemTemplate>
                                         </ItemsControl>
-            -->
-            <!--<Expander
+                -->
+                <!--<Expander
                                             Background="#FF112255"
                                             BorderBrush="#FF002255"
                                             BorderThickness="1,1,1,5"
@@ -70,7 +73,7 @@
 
                                             </Expander.Content>
                                         </Expander>-->
-            <!--
+                <!--
                                     </ControlTemplate>
                                 </Setter.Value>
                             </Setter>
@@ -91,9 +94,10 @@
                         </DataTemplate>
                     </GroupStyle.HeaderTemplate>
                 </GroupStyle>-->
-            <!--
+                <!--
             </DataGrid.GroupStyle>-->
-        </DataGrid>
+            </DataGrid>
+        </StackPanel>
 
         <Frame
             Name="MainFrame"
