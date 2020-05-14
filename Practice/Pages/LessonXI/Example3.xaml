@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="Practice.Pages.LessonXI.Example3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Practice.Pages.LessonXI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Example3"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center">
+            <Button Content="BlurEffect with Radius=2">
+                <Button.Effect>
+                    <BlurEffect Radius="2" />
+                </Button.Effect>
+            </Button>
+            <Button Content="BlurEffect with Radius=5  (Default)">
+                <Button.Effect>
+                    <BlurEffect Radius="5" />
+                </Button.Effect>
+            </Button>
+            <Button Content="BlurEffect with Radius=10">
+                <Button.Effect>
+                    <BlurEffect Radius="10" />
+                </Button.Effect>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="Тень по умолчанию">
+                <TextBlock.Effect>
+                    <DropShadowEffect />
+                </TextBlock.Effect>
+            </TextBlock>
+            <Button Content="Сияющая кнопка">
+                <Button.Effect>
+                    <DropShadowEffect
+                        BlurRadius="20"
+                        Opacity="0.6"
+                        ShadowDepth="0"
+                        Color="Red" />
+                </Button.Effect>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

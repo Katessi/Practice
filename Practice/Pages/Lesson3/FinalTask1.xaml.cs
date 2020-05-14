@@ -53,8 +53,7 @@ namespace Practice.Pages.Lesson3
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: Сделать закрытие
-            //this.Close();
+            App.Current.MainWindow.Close();
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)

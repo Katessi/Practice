@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Practice.Pages.Lesson5
+namespace Practice.Pages.LessonXI
 {
     /// <summary>
-    /// Interaction logic for Example5.xaml
+    /// Interaction logic for FinalTask2.xaml
     /// </summary>
-    public partial class Example5 : Page
+    public partial class FinalTask2 : Page
     {
-        public Example5()
+        public FinalTask2()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Button is clicked");
         }
     }
 }

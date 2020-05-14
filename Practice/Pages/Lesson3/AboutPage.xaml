@@ -20,13 +20,13 @@
 
         <Image Grid.Column="0" Source="https://sun9-28.userapi.com/c850336/v850336650/121ebf/zaYMWHcG2zA.jpg" />
 
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" Margin="10">
             <Label Content="Борисов Михаил" />
-            <TextBlock>Просто разработчик(нет)</TextBlock>
+            <TextBlock>Разработчик(нет)</TextBlock>
             <TextBlock>vk: @xarleyn</TextBlock>
             <TextBlock>tg: @xarleyn</TextBlock>
             <TextBlock>
-                site:<Hyperlink NavigateUri="https://xarleyn.tk/">xarleyn.tk</Hyperlink></TextBlock>
+                site:<Hyperlink NavigateUri="https://xarleyn.me/">xarleyn.me</Hyperlink></TextBlock>
         </StackPanel>
     </Grid>
 </Page>

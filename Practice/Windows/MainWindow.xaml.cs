@@ -36,7 +36,7 @@ namespace Practice.Windows
         {
             InitializeComponent();
 
-            TasksDataGrid.Visibility = Visibility.Collapsed;
+            LeftPanel.Visibility = Visibility.Collapsed;
             MainFrame.Navigate(PageToLoadInDialog);
         }
 
@@ -45,20 +45,30 @@ namespace Practice.Windows
 
         }
 
-        private void TasksDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void _SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (TasksDataGrid.SelectedItem is Models.MenuItem)
-            {
-                //Госпади как же много времени я портатил(((
-                var SelectedTask = TasksDataGrid.SelectedItem as Models.MenuItem;
+            var _ = sender as ListBox;
+            if (_.SelectedItem == null) return;
 
+            if (_.SelectedItem is Models.MenuItem)
+            {
+                var SelectedTask = _.SelectedItem as Models.MenuItem;
+
+                //Госпади как же много времени я портатил чтобы показать страницу по ее типу(((
                 object instance = Activator.CreateInstance(SelectedTask.TargetType);
-                if (MainFrame.Navigate(instance))
-                {
-                }
-                else
-                {
-                }
+                MainFrame.Navigate(instance);
+            }
+
+            _.SelectedItem = null;
+            e.Handled = true;
+        }
+
+
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as CheckBox).IsChecked == true)
+            {
+                //TODO: Немного изменить модельку чтобы тут работало
             }
         }
     }

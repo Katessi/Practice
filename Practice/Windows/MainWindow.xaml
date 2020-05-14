@@ -25,13 +25,38 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
-        <DockPanel Width="200">
+        <DockPanel x:Name="LeftPanel" Width="200">
             <Label
                 VerticalAlignment="Top"
                 Content="Меню в разработке"
                 DockPanel.Dock="Top" />
 
-            <DataGrid
+            <CheckBox  Content="Скрыть примеры" DockPanel.Dock="Top" Click="CheckBox_Click" />
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Menu}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Expander
+                                Margin="5"
+                                Header="{Binding Title}"
+                                IsExpanded="False">
+                                <ListBox ItemsSource="{Binding Path=MenuItems}" SelectionChanged="_SelectionChanged">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Path=Title}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </Expander>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+            <!--<DataGrid
                 x:Name="TasksDataGrid"
                 AutoGenerateColumns="False"
                 CanUserResizeColumns="False"
@@ -46,7 +71,8 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Title}" Header="Название" />
                 </DataGrid.Columns>
-                <!--<DataGrid.GroupStyle>
+            -->
+            <!--<DataGrid.GroupStyle>
                 <GroupStyle>
                     <GroupStyle.ContainerStyle>
                         <Style TargetType="{x:Type GroupItem}">
@@ -63,8 +89,8 @@
                                                 </DataTemplate>
                                             </ItemsControl.ItemTemplate>
                                         </ItemsControl>
-                -->
-                <!--<Expander
+            -->
+            <!--<Expander
                                             Background="#FF112255"
                                             BorderBrush="#FF002255"
                                             BorderThickness="1,1,1,5"
@@ -75,7 +101,7 @@
 
                                             </Expander.Content>
                                         </Expander>-->
-                <!--
+            <!--
                                     </ControlTemplate>
                                 </Setter.Value>
                             </Setter>
@@ -96,9 +122,10 @@
                         </DataTemplate>
                     </GroupStyle.HeaderTemplate>
                 </GroupStyle>-->
-                <!--
+            <!--
             </DataGrid.GroupStyle>-->
-            </DataGrid>
+            <!--
+            </DataGrid>-->
         </DockPanel>
 
         <Frame

@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Practice.Pages.Lesson5
+namespace Practice.Pages.LessonXI
 {
     /// <summary>
-    /// Interaction logic for Example5.xaml
+    /// Interaction logic for MySlider.xaml
     /// </summary>
-    public partial class Example5 : Page
+    public partial class MySlider : UserControl
     {
-        public Example5()
+        public MySlider()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Button is clicked");
         }
     }
 }

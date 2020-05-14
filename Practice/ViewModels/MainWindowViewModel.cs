@@ -66,6 +66,7 @@ namespace Practice.ViewModels
                         new MenuItem { Title="Пример 5", TargetType = typeof(Pages.Lesson5.Example5) },
                         new MenuItem { Title="Задание 1", TargetType = typeof(Pages.Lesson5.FinalTask1) },
                         new MenuItem { Title="Задание 2", TargetType = typeof(Pages.Lesson5.FinalTask2) },
+                        new MenuItem { Title="Задание 3", TargetType = typeof(Pages.Lesson5.FinalTask3) },
                     }
                 },
                 new MenuGroup{ Title = "Занятие 6", MenuItems =
@@ -114,11 +115,32 @@ namespace Practice.ViewModels
                         new MenuItem { Title="Задание 1", TargetType = typeof(Pages.Lesson9.FinalTask1) },
                     }
                 },
-                new MenuGroup{ Title = "Занятие X", MenuItems =
+                new MenuGroup{ Title = "Занятие 10", MenuItems =
                     new List<MenuItem>{
                         new MenuItem { Title="Примеры", TargetType = typeof(Pages.LessonX.Examples) },
                         new MenuItem { Title="Задание 1", TargetType = typeof(Pages.LessonX.FinalTask1) },
                         new MenuItem { Title="Задание 2", TargetType = typeof(Pages.LessonX.FinalTask2) },
+                    }
+                },
+                new MenuGroup{ Title = "Занятие 11", MenuItems =
+                    new List<MenuItem>{
+                        new MenuItem { Title="Пример 1", TargetType = typeof(Pages.LessonXI.Example1) },
+                        new MenuItem { Title="Пример 2", TargetType = typeof(Pages.LessonXI.Example2) },
+                        new MenuItem { Title="Задание 1", TargetType = typeof(Pages.LessonXI.FinalTask1) },
+                        new MenuItem { Title="Задание 2", TargetType = typeof(Pages.LessonXI.FinalTask2) },
+                    }
+                },
+                new MenuGroup{ Title = "Занятие 12", MenuItems =
+                    new List<MenuItem>{
+                        new MenuItem { Title="Пример 1", TargetType = typeof(Pages.LessonXII.Example1) },
+                        new MenuItem { Title="Задание 1", TargetType = typeof(Pages.LessonXII.FinalTask1) },
+                    }
+                },
+                new MenuGroup{ Title = "Занятие 13", MenuItems =
+                    new List<MenuItem>{
+                        new MenuItem { Title="Пример", TargetType = typeof(Pages.LessonXIII.Example1) },
+                        new MenuItem { Title="Задание 1", TargetType = typeof(Pages.LessonXIII.FinalTask1) },
+                        new MenuItem { Title="Задание 2", TargetType = typeof(Pages.LessonXIII.FinalTask2) },
                     }
                 }
             };
