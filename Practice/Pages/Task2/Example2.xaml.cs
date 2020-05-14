@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Practice.Pages.Task2
 {
     /// <summary>
-    /// Interaction logic for Task4.xaml
+    /// Interaction logic for Task2.xaml
     /// </summary>
-    public partial class Task4 : Page
+    public partial class Example2 : Page
     {
-        public Task4()
+        public Example2()
         {
             InitializeComponent();
         }

@@ -15,8 +15,7 @@
         <Label
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Content="Привет ;)" />
-
-        <ListBox x:Name="FrameList" />
+            Content="Привет ;)"
+            FontSize="96" />
     </Grid>
 </Page>

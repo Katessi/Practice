@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -28,39 +29,37 @@ namespace Practice.Windows
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
             MainFrame.Navigate(new Pages.MainPage());
         }
 
-        private void TasksListBox_Selected(object sender, RoutedEventArgs e)
+        public MainWindow(Page PageToLoadInDialog)
         {
-            var item = (sender as System.Windows.Controls.ListBox).SelectedItem as Models.MenuItem;
+            InitializeComponent();
 
+            TasksDataGrid.Visibility = Visibility.Collapsed;
+            MainFrame.Navigate(PageToLoadInDialog);
         }
 
-        private void TasksDataGrid_Selected(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
 
         private void TasksDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            var SelectedTask = TasksDataGrid.SelectedItem as Models.MenuGroup;
-            MessageBox.Show((TasksDataGrid.SelectedItem as Models.MenuGroup).Title);
-            //if (SelectedTask == null)
-            //    return;
+            if (TasksDataGrid.SelectedItem is Models.MenuItem)
+            {
+                //Госпади как же много времени я портатил(((
+                var SelectedTask = TasksDataGrid.SelectedItem as Models.MenuItem;
 
-            //if (MainFrame.NavigationService.Navigate(SelectedTask.))
-            //{
-            //    Debug.WriteLine("All good");
-            //}
-            //else
-            //{
-            //    Debug.Fail("So bad");
-            //}
+                object instance = Activator.CreateInstance(SelectedTask.TargetType);
+                if (MainFrame.Navigate(instance))
+                {
+                }
+                else
+                {
+                }
+            }
         }
     }
 }
