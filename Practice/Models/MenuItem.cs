@@ -18,7 +18,7 @@ namespace Practice.Models
         public int Id { get; set; }
         public string Title { get; set; }
 
-        public ObservableCollection<MenuItem> MenuItems { get; set; }
+        public ICollection<MenuItem> MenuItems { get; set; }
     }
 
     public class MenuItem

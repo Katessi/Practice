@@ -35,20 +35,32 @@ namespace Practice.Windows
             MainFrame.Navigate(new Pages.MainPage());
         }
 
-        private void MenuItemsListView_Selected(object sender, RoutedEventArgs e)
+        private void TasksListBox_Selected(object sender, RoutedEventArgs e)
         {
-            var item = (sender as System.Windows.Controls.ListView).SelectedItem as Models.MenuItem;
-            if (item == null)
-                return;
+            var item = (sender as System.Windows.Controls.ListBox).SelectedItem as Models.MenuItem;
 
-            if (MainFrame.NavigationService.Navigate(item.TargetType))
-            {
-                Debug.WriteLine("All good");
-            }
-            else
-            {
-                Debug.Fail("So bad");
-            }
+        }
+
+        private void TasksDataGrid_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TasksDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            var SelectedTask = TasksDataGrid.SelectedItem as Models.MenuGroup;
+            MessageBox.Show((TasksDataGrid.SelectedItem as Models.MenuGroup).Title);
+            //if (SelectedTask == null)
+            //    return;
+
+            //if (MainFrame.NavigationService.Navigate(SelectedTask.))
+            //{
+            //    Debug.WriteLine("All good");
+            //}
+            //else
+            //{
+            //    Debug.Fail("So bad");
+            //}
         }
     }
 }
