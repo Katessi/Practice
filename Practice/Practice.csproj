@@ -57,6 +57,144 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="Pages\Lesson4\Example1.xaml.cs">
+      <DependentUpon>Example1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson4\Example2.xaml.cs">
+      <DependentUpon>Example2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson4\FinalTask1.xaml.cs">
+      <DependentUpon>FinalTask1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson4\FinalTask2.xaml.cs">
+      <DependentUpon>FinalTask2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson4\FinalTask3.xaml.cs">
+      <DependentUpon>FinalTask3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson4\FinalTask4.xaml.cs">
+      <DependentUpon>FinalTask4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson5\Example1.xaml.cs">
+      <DependentUpon>Example1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson5\Example2.xaml.cs">
+      <DependentUpon>Example2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson5\Example3.xaml.cs">
+      <DependentUpon>Example3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson5\Example4.xaml.cs">
+      <DependentUpon>Example4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson5\Example5.xaml.cs">
+      <DependentUpon>Example5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson5\FinalTask1.xaml.cs">
+      <DependentUpon>FinalTask1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson5\FinalTask2.xaml.cs">
+      <DependentUpon>FinalTask2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson5\FinalTask3.xaml.cs">
+      <DependentUpon>FinalTask3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson6\Example1.xaml.cs">
+      <DependentUpon>Example1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson6\Example2.xaml.cs">
+      <DependentUpon>Example2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson6\FinalTask1.xaml.cs">
+      <DependentUpon>FinalTask1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson6\FinalTask2.xaml.cs">
+      <DependentUpon>FinalTask2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson7\FinalTask1.xaml.cs">
+      <DependentUpon>FinalTask1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson7\FinalTask2.xaml.cs">
+      <DependentUpon>FinalTask2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson7\FinalTask3.xaml.cs">
+      <DependentUpon>FinalTask3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson8\Example1.xaml.cs">
+      <DependentUpon>Example1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson8\Example2.xaml.cs">
+      <DependentUpon>Example2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson8\Example3.xaml.cs">
+      <DependentUpon>Example3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson8\Example4.xaml.cs">
+      <DependentUpon>Example4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson8\Example5.xaml.cs">
+      <DependentUpon>Example5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson8\Example6.xaml.cs">
+      <DependentUpon>Example6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson8\FinalTask1.xaml.cs">
+      <DependentUpon>FinalTask1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson8\FinalTask2.xaml.cs">
+      <DependentUpon>FinalTask2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example1.xaml.cs">
+      <DependentUpon>Example1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example10.xaml.cs">
+      <DependentUpon>Example10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example11.xaml.cs">
+      <DependentUpon>Example11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example12.xaml.cs">
+      <DependentUpon>Example12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example13.xaml.cs">
+      <DependentUpon>Example13.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example2.xaml.cs">
+      <DependentUpon>Example2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example3.xaml.cs">
+      <DependentUpon>Example3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example4.xaml.cs">
+      <DependentUpon>Example4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example5.xaml.cs">
+      <DependentUpon>Example5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example6.xaml.cs">
+      <DependentUpon>Example6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example7.xaml.cs">
+      <DependentUpon>Example7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example8.xaml.cs">
+      <DependentUpon>Example8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\Example9.xaml.cs">
+      <DependentUpon>Example9.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Lesson9\FinalTask1.xaml.cs">
+      <DependentUpon>FinalTask1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LessonX\Examples.xaml.cs">
+      <DependentUpon>Examples.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LessonX\FinalTask1.xaml.cs">
+      <DependentUpon>FinalTask1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LessonX\FinalTask2.xaml.cs">
+      <DependentUpon>FinalTask2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -104,6 +242,190 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Lesson4\Example1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson4\Example2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson4\FinalTask1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson4\FinalTask2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson4\FinalTask3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson4\FinalTask4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson5\Example1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson5\Example2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson5\Example3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson5\Example4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson5\Example5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson5\FinalTask1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson5\FinalTask2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson5\FinalTask3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson6\Example1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson6\Example2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson6\FinalTask1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson6\FinalTask2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson7\FinalTask1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson7\FinalTask2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson7\FinalTask3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson8\Example1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson8\Example2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson8\Example3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson8\Example4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson8\Example5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson8\Example6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson8\FinalTask1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson8\FinalTask2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example13.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\Example9.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Lesson9\FinalTask1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LessonX\Examples.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LessonX\FinalTask1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LessonX\FinalTask2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,14 +509,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Lesson4\" />
-    <Folder Include="Pages\Lesson5\" />
-    <Folder Include="Pages\Lesson6\" />
-    <Folder Include="Pages\Lesson7\" />
-    <Folder Include="Pages\Lesson8\" />
-    <Folder Include="Pages\Lesson9\" />
-    <Folder Include="Pages\LessonX\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

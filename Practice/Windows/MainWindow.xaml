@@ -25,12 +25,14 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Width="200">
-            <Label Content="Меню в разработке" />
+        <DockPanel Width="200">
+            <Label
+                VerticalAlignment="Top"
+                Content="Меню в разработке"
+                DockPanel.Dock="Top" />
 
             <DataGrid
                 x:Name="TasksDataGrid"
-                VerticalAlignment="Stretch"
                 AutoGenerateColumns="False"
                 CanUserResizeColumns="False"
                 CanUserResizeRows="False"
@@ -97,7 +99,7 @@
                 <!--
             </DataGrid.GroupStyle>-->
             </DataGrid>
-        </StackPanel>
+        </DockPanel>
 
         <Frame
             Name="MainFrame"
