@@ -31,7 +31,12 @@
                 Content="Меню в разработке"
                 DockPanel.Dock="Top" />
 
-            <CheckBox  Content="Скрыть примеры" DockPanel.Dock="Top" Click="CheckBox_Click" />
+            <CheckBox
+                Checked="CheckBox_ChangeState"
+                Content="Скрыть примеры"
+                DockPanel.Dock="Top"
+                Unchecked="CheckBox_ChangeState"
+                Visibility="Collapsed" />
 
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <ItemsControl ItemsSource="{Binding Menu}">

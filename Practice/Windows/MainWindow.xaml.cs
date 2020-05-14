@@ -17,6 +17,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MenuItem = Practice.Models.MenuItem;
 
 namespace Practice.Windows
 {
@@ -64,20 +65,27 @@ namespace Practice.Windows
         }
 
 
-        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        private void CheckBox_ChangeState(object sender, RoutedEventArgs e)
         {
+            //TODO: Немного изменить модельку чтобы тут работало
+            var MainWindowViewModel = new MainWindowViewModel();
+            MainWindowViewModel.LoadData();
             if ((sender as CheckBox).IsChecked == true)
             {
-                //TODO: Немного изменить модельку чтобы тут работало
-                var MainWindowViewModel = new MainWindowViewModel();
                 //MainWindowViewModel.Menu = MainWindowViewModel.Menu.Where(x => x.MenuItems.Select(y => y.Title.));
+                
                 //Возможно нужно переписать на linq
                 var newMenu = new List<MenuGroup>();
                 foreach (var menuGroup in MainWindowViewModel.Menu)
                 {
-                    var newGroup = new MenuGroup();
+                    var newGroup = menuGroup;
+                    newGroup.MenuItems = new List<MenuItem>();
                     foreach (var menuItem in menuGroup.MenuItems)
                     {
+                        //TODO: Лучше избигать таких конструкция, они портят читаемость
+                        if (!menuGroup.MenuItems?.Any() ?? true)
+                            continue;
+
                         if (menuItem.Title.Contains("Задание"))
                         {
                             newGroup.MenuItems.Add(menuItem);
@@ -87,6 +95,8 @@ namespace Practice.Windows
                 }
                 MainWindowViewModel.Menu = newMenu;
             }
+
+            DataContext = MainWindowViewModel;
         }
     }
 }
