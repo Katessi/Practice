@@ -66,40 +66,90 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
             <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="20" />
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="1" Grid.Column="0">
-            <Button.Template>
-                <ControlTemplate>
-                    <Viewbox>
-                        <Canvas
-                            x:Name="MainCanvas"
-                            Width="150"
-                            Height="150"
-                            Background="Red" />
-                    </Viewbox>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-
         <Viewbox
+            x:Name="MainViewBox1"
             Grid.Row="1"
             Grid.Column="1"
+            Width="100"
+            Height="100"
+            RenderTransformOrigin="0.5,0.5"
             SnapsToDevicePixels="True"
-            Stretch="Uniform"
-            StretchDirection="DownOnly">
-            <Canvas Width="200" Height="200">
+            Stretch="UniformToFill">
+            <Viewbox.RenderTransform>
+                <RotateTransform x:Name="noFreeze" />
+            </Viewbox.RenderTransform>
+            <Canvas
+                MinWidth="100"
+                MinHeight="100"
+                MaxWidth="200"
+                MaxHeight="200">
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="MouseUp">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    By="20"
+                                    Storyboard.TargetName="MainViewBox1"
+                                    Storyboard.TargetProperty="(Rectangle.RenderTransform).(RotateTransform.Angle)"
+                                    Duration="0:0:0.5" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox1"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding Width}"
+                                    To="200"
+                                    Duration="0:0:1" />
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox1"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding Height}"
+                                    To="200"
+                                    Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox1"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding Width}"
+                                    To="100"
+                                    Duration="0:0:1" />
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox1"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding Height}"
+                                    To="100"
+                                    Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
                 <Path
-                    x:Name="Path"
-                    Width="200"
-                    Height="200"
+                    Width="100"
+                    Height="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
                     Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z"
                     Stretch="Fill"
                     Stroke="DimGray">
@@ -113,71 +163,241 @@
                         </RadialGradientBrush>
                     </Path.Fill>
                 </Path>
-                <!--<Ellipse
-                    Canvas.Left="100"
-                    Canvas.Top="100"
-                    Width="100"
-                    Height="100"
+                <Ellipse
+                    Width="50"
+                    Height="50"
+                    Margin="25"
                     Fill="#FFAAABAF"
                     Stroke="Black" />
                 <Rectangle
-                    Canvas.Left="75"
-                    Canvas.Top="135"
-                    Width="150"
-                    Height="30"
+                    Canvas.Left="5"
+                    Canvas.Top="40"
+                    Width="90"
+                    Height="20"
                     Fill="#FF92EC92"
                     Stroke="Black" />
                 <Rectangle
-                    Canvas.Left="75"
-                    Canvas.Top="143"
-                    Width="31"
-                    Height="14"
-                    Fill="#FF611D03"
-                    Stroke="Black" />-->
+                    Canvas.Left="6"
+                    Canvas.Top="47"
+                    Width="20"
+                    Height="6"
+                    Fill="#FF7D0900"
+                    Stroke="Black" />
             </Canvas>
         </Viewbox>
 
-        <Path
+        <Viewbox
+            x:Name="MainViewBox2"
+            Grid.Row="1"
+            Grid.Column="3"
             Width="100"
             Height="100"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z"
-            Stretch="Fill"
-            Stroke="DimGray">
-            <Path.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Offset="0.30" Color="#FFA5A5A5" />
-                    <GradientStop Offset="0.10" Color="#FFA5A5A5" />
-                    <GradientStop Offset="0.25" Color="#FFA5A5A5" />
-                    <GradientStop Offset="1" Color="#FFA5A5A5" />
-                    <GradientStop Offset="0.80" Color="White" />
-                </RadialGradientBrush>
-            </Path.Fill>
-            <Path.Triggers>
-                <EventTrigger RoutedEvent="MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <SizeAnimation
-                                Storyboard.TargetProperty="Size"
-                                From="100,100"
-                                To="200,200"
-                                Duration="0:0:1.5" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-                <!--<EventTrigger RoutedEvent="MouseLeave">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <SizeAnimation
-                                Storyboard.TargetProperty="Size"
-                                From="100,100"
-                                To="200,200"
-                                Duration="0:0:1.5" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>-->
-            </Path.Triggers>
-        </Path>
+            RenderTransformOrigin="0.5,0.5"
+            SnapsToDevicePixels="True"
+            Stretch="UniformToFill">
+            <Viewbox.RenderTransform>
+                <RotateTransform x:Name="noFreeze2" />
+            </Viewbox.RenderTransform>
+            <Canvas
+                MinWidth="100"
+                MinHeight="100"
+                MaxWidth="200"
+                MaxHeight="200">
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="MouseUp">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    By="20"
+                                    Storyboard.TargetName="MainViewBox2"
+                                    Storyboard.TargetProperty="(Rectangle.RenderTransform).(RotateTransform.Angle)"
+                                    Duration="0:0:0.5" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox2"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding Width}"
+                                    To="200"
+                                    Duration="0:0:1" />
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox2"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding Height}"
+                                    To="200"
+                                    Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox2"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding Width}"
+                                    To="100"
+                                    Duration="0:0:1" />
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox2"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding Height}"
+                                    To="100"
+                                    Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
+                <Path
+                    Width="100"
+                    Height="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z"
+                    Stretch="Fill"
+                    Stroke="DimGray">
+                    <Path.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Offset="0.30" Color="#FFA5A5A5" />
+                            <GradientStop Offset="0.10" Color="#FFA5A5A5" />
+                            <GradientStop Offset="0.25" Color="#FFA5A5A5" />
+                            <GradientStop Offset="1" Color="#FFA5A5A5" />
+                            <GradientStop Offset="0.80" Color="White" />
+                        </RadialGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Ellipse
+                    Width="50"
+                    Height="50"
+                    Margin="25"
+                    Fill="#FFAAABAF"
+                    Stroke="Black" />
+                <Rectangle
+                    Canvas.Left="5"
+                    Canvas.Top="40"
+                    Width="90"
+                    Height="20"
+                    Fill="#FF92EC92"
+                    Stroke="Black" />
+                <Rectangle
+                    Canvas.Left="6"
+                    Canvas.Top="47"
+                    Width="20"
+                    Height="6"
+                    Fill="#FF7D0900"
+                    Stroke="Black" />
+            </Canvas>
+        </Viewbox>
+
+        <Viewbox
+            x:Name="MainViewBox3"
+            Grid.Row="1"
+            Grid.Column="5"
+            Width="100"
+            Height="100"
+            RenderTransformOrigin="0.5,0.5"
+            SnapsToDevicePixels="True"
+            Stretch="UniformToFill">
+            <Viewbox.RenderTransform>
+                <RotateTransform x:Name="noFreeze3" />
+            </Viewbox.RenderTransform>
+            <Canvas
+                MinWidth="100"
+                MinHeight="100"
+                MaxWidth="200"
+                MaxHeight="200">
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="MouseUp">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    By="20"
+                                    Storyboard.TargetName="MainViewBox3"
+                                    Storyboard.TargetProperty="(Rectangle.RenderTransform).(RotateTransform.Angle)"
+                                    Duration="0:0:0.5" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox3"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding Width}"
+                                    To="200"
+                                    Duration="0:0:1" />
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox3"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding Height}"
+                                    To="200"
+                                    Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox3"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding Width}"
+                                    To="100"
+                                    Duration="0:0:1" />
+                                <DoubleAnimation
+                                    Storyboard.TargetName="MainViewBox3"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding Height}"
+                                    To="100"
+                                    Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
+                <Path
+                    Width="100"
+                    Height="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z"
+                    Stretch="Fill"
+                    Stroke="DimGray">
+                    <Path.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Offset="0.30" Color="#FFA5A5A5" />
+                            <GradientStop Offset="0.10" Color="#FFA5A5A5" />
+                            <GradientStop Offset="0.25" Color="#FFA5A5A5" />
+                            <GradientStop Offset="1" Color="#FFA5A5A5" />
+                            <GradientStop Offset="0.80" Color="White" />
+                        </RadialGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Ellipse
+                    Width="50"
+                    Height="50"
+                    Margin="25"
+                    Fill="#FFAAABAF"
+                    Stroke="Black" />
+                <Rectangle
+                    Canvas.Left="5"
+                    Canvas.Top="40"
+                    Width="90"
+                    Height="20"
+                    Fill="#FF92EC92"
+                    Stroke="Black" />
+                <Rectangle
+                    Canvas.Left="6"
+                    Canvas.Top="47"
+                    Width="20"
+                    Height="6"
+                    Fill="#FF7D0900"
+                    Stroke="Black" />
+            </Canvas>
+        </Viewbox>
     </Grid>
 </Page>
