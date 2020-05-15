@@ -17,12 +17,8 @@
                     <Setter Property="Panel.ZIndex" Value="99" />
                 </Trigger>
 
-                <EventTrigger RoutedEvent="MouseEnter">
-                    
-                </EventTrigger>
-                <EventTrigger RoutedEvent="MouseLeave">
-                    
-                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseEnter" />
+                <EventTrigger RoutedEvent="MouseLeave" />
             </Style.Triggers>
         </Style>
     </Page.Resources>
