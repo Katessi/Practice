@@ -24,5 +24,17 @@ namespace Practice.Pages.Lesson6
         {
             InitializeComponent();
         }
+
+        private void _TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TextBox1.Text) || !string.IsNullOrEmpty(TextBox2.Text))
+            {
+                ButtonClose.IsEnabled = false;
+            }
+            else
+            {
+                ButtonClose.IsEnabled = true;
+            }
+        }
     }
 }

@@ -10,5 +10,76 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    
+    <Page.Resources>
+        <Style x:Key="s1" TargetType="TextBox">
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+        <Style x:Key="s2" TargetType="TextBox">
+            <Setter Property="FontSize" Value="10" />
+        </Style>
+
+        <Style x:Key="Grad" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,3">
+                        <GradientStop Offset="0" Color="White" />
+                        <GradientStop Offset="1" Color="Green" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Rectangle
+            Width="Auto"
+            Height="Auto"
+            Style="{StaticResource ResourceKey=Grad}" />
+        <Rectangle
+            Grid.Column="1"
+            Width="Auto"
+            Height="Auto"
+            Style="{StaticResource ResourceKey=Grad}" />
+
+        <StackPanel Grid.Column="0">
+            <TextBox
+                Name="t1"
+                Grid.Column="0"
+                Height="200"
+                Margin="0,0,0,16"
+                Style="{StaticResource ResourceKey=s1}" />
+            <TextBox
+                Name="t2"
+                Grid.Column="1"
+                Height="200"
+                Style="{StaticResource ResourceKey=s2}" />
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox
+                Name="t3"
+                Grid.Column="0"
+                Height="200"
+                Margin="0,0,0,16"
+                Style="{StaticResource ResourceKey=s2}" />
+            <TextBox
+                Name="t4"
+                Grid.Column="1"
+                Height="136"
+                Style="{StaticResource ResourceKey=s2}" />
+            <Button
+                Width="100"
+                Height="20"
+                Content="Open" />
+            <Button
+                Width="100"
+                Height="20"
+                Content="Save" />
+        </StackPanel>
+    </Grid>
+
 </Page>

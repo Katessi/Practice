@@ -25,7 +25,7 @@
                     </DataTrigger.EnterActions>
                 </DataTrigger>
             </Style.Triggers>
-        </Style>-->
+        </Style>
 
         <Style TargetType="Image">
             <Style.Triggers>
@@ -44,7 +44,7 @@
                     </DataTrigger.EnterActions>
                 </DataTrigger>
             </Style.Triggers>
-        </Style>
+        </Style>-->
     </UserControl.Resources>
     <StackPanel Orientation="Vertical">
         <!--<StackPanel Orientation="Horizontal">

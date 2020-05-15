@@ -21,17 +21,16 @@ namespace Practice.Pages.Lesson7
     /// </summary>
     public partial class FinalTask2 : Page
     {
-        private ThicknessAnimation Animation;
+        private ThicknessAnimation Animation = new ThicknessAnimation()
+        {
+            From = new Thickness(0, 0, 0, 0),
+            To = new Thickness(5, 5, 5, 5),
+            Duration = TimeSpan.FromMilliseconds(200)
+        };
 
         public FinalTask2()
         {
             InitializeComponent();
-            Animation = new ThicknessAnimation()
-            {
-                From = new Thickness(0, 0, 0, 0),
-                To = new Thickness(5, 5, 5, 5),
-                Duration = TimeSpan.FromMilliseconds(200)
-            };
         }
 
         private void Button_MouseEnter(object sender, MouseEventArgs e)

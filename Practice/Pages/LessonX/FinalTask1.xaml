@@ -21,7 +21,7 @@
             <RowDefinition />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-
+        
         <Canvas
             Grid.Row="0"
             Grid.Column="0"
@@ -119,9 +119,6 @@
                 Opacity="0.4" />
         </Canvas>
 
-        <Label
-            Grid.Row="1"
-            Grid.ColumnSpan="3"
-            Content="Все уехало так как каждый объект в канвасе хочет потянуть размер на себя" />
+        <Label Content="Все уехало так как каждый объект в канвасе хочет потянуть размер на себя" Grid.Row="1" Grid.ColumnSpan="3" />
     </Grid>
 </Page>
