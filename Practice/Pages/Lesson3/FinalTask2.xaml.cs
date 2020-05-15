@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Practice.Pages.Lesson3
 {
@@ -30,7 +19,9 @@ namespace Practice.Pages.Lesson3
             var slider = sender as Slider;
 
             if (area == null)
+            {
                 return;
+            }
 
             area.DefaultDrawingAttributes.Width = slider.Value;
             area.DefaultDrawingAttributes.Height = slider.Value;
@@ -41,7 +32,9 @@ namespace Practice.Pages.Lesson3
             var cb = sender as ComboBox;
 
             if (area == null)
+            {
                 return;
+            }
 
             if (cb.SelectedIndex == 0)
             {
@@ -74,10 +67,14 @@ namespace Practice.Pages.Lesson3
             }
 
             if (!double.TryParse(tb.Text, out double size))
+            {
                 return;
+            }
 
             if (area == null)
+            {
                 return;
+            }
 
             area.DefaultDrawingAttributes.Width = size;
             area.DefaultDrawingAttributes.Width = size;

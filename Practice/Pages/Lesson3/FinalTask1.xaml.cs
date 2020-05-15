@@ -1,18 +1,6 @@
-﻿using Practice.Windows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Practice.Pages.Lesson3
 {
@@ -31,19 +19,19 @@ namespace Practice.Pages.Lesson3
             var cb = sender as ComboBox;
             if (cb.SelectedIndex == 0)
             {
-                this.Background = Brushes.White;
+                Background = Brushes.White;
             }
             else if (cb.SelectedIndex == 1)
             {
-                this.Background = Brushes.Red;
+                Background = Brushes.Red;
             }
             else if (cb.SelectedIndex == 2)
             {
-                this.Background = Brushes.Green;
+                Background = Brushes.Green;
             }
             else if (cb.SelectedIndex == 3)
             {
-                this.Background = Brushes.Blue;
+                Background = Brushes.Blue;
             }
             else
             {
