@@ -21,9 +21,9 @@
         <Style x:Key="Grad" TargetType="Rectangle">
             <Setter Property="Fill">
                 <Setter.Value>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,3" >
-                        <GradientStop Color="White" Offset="0" />
-                        <GradientStop Color="Green" Offset="1" />
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,3">
+                        <GradientStop Offset="0" Color="White" />
+                        <GradientStop Offset="1" Color="Green" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
@@ -36,13 +36,15 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Rectangle  
-               Width="Auto"
-                Height="Auto" Style="{StaticResource ResourceKey=Grad}">
-        </Rectangle >
-        <Rectangle Width="Auto"
-                Height="Auto" Style="{StaticResource ResourceKey=Grad}" Grid.Column="1">
-        </Rectangle>
+        <Rectangle
+            Width="Auto"
+            Height="Auto"
+            Style="{StaticResource ResourceKey=Grad}" />
+        <Rectangle
+            Grid.Column="1"
+            Width="Auto"
+            Height="Auto"
+            Style="{StaticResource ResourceKey=Grad}" />
 
         <StackPanel Grid.Column="0">
             <TextBox

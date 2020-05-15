@@ -10,7 +10,5 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <Grid>
-        
-    </Grid>
+    <Grid />
 </Page>
