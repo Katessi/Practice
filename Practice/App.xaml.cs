@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,14 +20,20 @@ namespace Practice
         {
             try
             {
+                Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
                 MainWindow = new Windows.MainWindow();
                 MainWindow.Show();
             }
-            catch (Exception)
+            catch
             {
 
-                throw;
             }
+        }
+
+        private void Current_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            Debug.Fail(e.Exception.ToString());
+            e.Handled = true;
         }
 
         private void Application_Exit(object sender, ExitEventArgs e)

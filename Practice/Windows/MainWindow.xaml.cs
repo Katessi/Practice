@@ -69,7 +69,6 @@ namespace Practice.Windows
         {
             //TODO: Немного изменить модельку чтобы тут работало
             var MainWindowViewModel = new MainWindowViewModel();
-            MainWindowViewModel.LoadData();
             if ((sender as CheckBox).IsChecked == true)
             {
                 //MainWindowViewModel.Menu = MainWindowViewModel.Menu.Where(x => x.MenuItems.Select(y => y.Title.));

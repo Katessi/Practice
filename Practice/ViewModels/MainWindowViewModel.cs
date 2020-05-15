@@ -27,7 +27,7 @@ namespace Practice.ViewModels
 
         public MainWindowViewModel()
         {
-            //LoadData();
+            LoadData();
         }
 
         //TODO: Изменить способ загрузки меню

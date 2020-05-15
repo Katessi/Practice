@@ -43,6 +43,24 @@
                 </Trigger>-->
             </Style.Triggers>
         </Style>
+
+        <!--<Style x:Key="TestStyle" TargetType="Viewbox">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard TargetProperty="Angle">
+                                <DoubleAnimation
+                                    AutoReverse="True"
+                                    From="0"
+                                    To="360"
+                                    Duration="0:0:6" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>-->
     </Page.Resources>
 
     <Grid>
@@ -71,33 +89,95 @@
             </Button.Template>
         </Button>
 
-        <Image
-            Margin="149,19,10,21.333"
-            Source="/Practice;component/Image2.png"
-            Stretch="Fill" />
         <Viewbox
+            Grid.Row="1"
             Grid.Column="1"
-            Width="100"
-            Height="100">
-            <Canvas Width="100" Height="100">
-                <Ellipse
-                    Width="50"
-                    Height="50"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
+            SnapsToDevicePixels="True"
+            Stretch="Uniform"
+            StretchDirection="DownOnly">
+            <Canvas Width="200" Height="200">
+                <Path
+                    x:Name="Path"
+                    Width="200"
+                    Height="200"
+                    Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z"
+                    Stretch="Fill"
+                    Stroke="DimGray">
+                    <Path.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Offset="0.30" Color="#FFA5A5A5" />
+                            <GradientStop Offset="0.10" Color="#FFA5A5A5" />
+                            <GradientStop Offset="0.25" Color="#FFA5A5A5" />
+                            <GradientStop Offset="1" Color="#FFA5A5A5" />
+                            <GradientStop Offset="0.80" Color="White" />
+                        </RadialGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <!--<Ellipse
+                    Canvas.Left="100"
+                    Canvas.Top="100"
+                    Width="100"
+                    Height="100"
                     Fill="#FFAAABAF"
                     Stroke="Black" />
-                <Polygon Points="50,0 95,20 95,80 50,100 0,80 0,20" Stroke="Gray">
-                    <Polygon.Fill>
-                        <RadialGradientBrush>
-                            <GradientStop Offset="0.285" Color="#FFA5A5A5" />
-                            <GradientStop Offset="1" Color="#FFA5A5A5" />
-                            <GradientStop Offset="0.75" Color="White" />
-                        </RadialGradientBrush>
-                    </Polygon.Fill>
-                </Polygon>
+                <Rectangle
+                    Canvas.Left="75"
+                    Canvas.Top="135"
+                    Width="150"
+                    Height="30"
+                    Fill="#FF92EC92"
+                    Stroke="Black" />
+                <Rectangle
+                    Canvas.Left="75"
+                    Canvas.Top="143"
+                    Width="31"
+                    Height="14"
+                    Fill="#FF611D03"
+                    Stroke="Black" />-->
             </Canvas>
         </Viewbox>
 
+        <Path
+            Width="100"
+            Height="100"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 z"
+            Stretch="Fill"
+            Stroke="DimGray">
+            <Path.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Offset="0.30" Color="#FFA5A5A5" />
+                    <GradientStop Offset="0.10" Color="#FFA5A5A5" />
+                    <GradientStop Offset="0.25" Color="#FFA5A5A5" />
+                    <GradientStop Offset="1" Color="#FFA5A5A5" />
+                    <GradientStop Offset="0.80" Color="White" />
+                </RadialGradientBrush>
+            </Path.Fill>
+            <Path.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <SizeAnimation
+                                Storyboard.TargetProperty="Size"
+                                From="100,100"
+                                To="200,200"
+                                Duration="0:0:1.5" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <!--<EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <SizeAnimation
+                                Storyboard.TargetProperty="Size"
+                                From="100,100"
+                                To="200,200"
+                                Duration="0:0:1.5" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>-->
+            </Path.Triggers>
+        </Path>
     </Grid>
 </Page>
