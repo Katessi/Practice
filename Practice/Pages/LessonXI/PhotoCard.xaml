@@ -9,7 +9,7 @@
     d:DesignWidth="200"
     mc:Ignorable="d">
     <UserControl.Resources>
-        <Style x:Key="RotateLeftButtonStyle" TargetType="Button">
+        <!--<Style x:Key="RotateLeftButtonStyle" TargetType="Button">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding ElementName=RotateLeftButton, Path=IsPressed}" Value="True">
                     <DataTrigger.EnterActions>
@@ -25,7 +25,7 @@
                     </DataTrigger.EnterActions>
                 </DataTrigger>
             </Style.Triggers>
-        </Style>
+        </Style>-->
 
         <Style TargetType="Image">
             <Style.Triggers>
@@ -47,7 +47,7 @@
         </Style>
     </UserControl.Resources>
     <StackPanel Orientation="Vertical">
-        <StackPanel Orientation="Horizontal">
+        <!--<StackPanel Orientation="Horizontal">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
@@ -69,6 +69,6 @@
                     <Button x:Name="RotateRightButton" Content="↷" />
                 </StackPanel>
             </Grid>
-        </StackPanel>
+        </StackPanel>-->
     </StackPanel>
 </UserControl>
