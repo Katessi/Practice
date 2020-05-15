@@ -1,22 +1,12 @@
 ﻿using Practice.Models;
 using Practice.ViewModels;
+
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 using MenuItem = Practice.Models.MenuItem;
 
 namespace Practice.Windows
@@ -49,7 +39,10 @@ namespace Practice.Windows
         private void _SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var _ = sender as ListBox;
-            if (_.SelectedItem == null) return;
+            if (_.SelectedItem == null)
+            {
+                return;
+            }
 
             if (_.SelectedItem is Models.MenuItem)
             {
@@ -72,7 +65,7 @@ namespace Practice.Windows
             if ((sender as CheckBox).IsChecked == true)
             {
                 //MainWindowViewModel.Menu = MainWindowViewModel.Menu.Where(x => x.MenuItems.Select(y => y.Title.));
-                
+
                 //Возможно нужно переписать на linq
                 var newMenu = new List<MenuGroup>();
                 foreach (var menuGroup in MainWindowViewModel.Menu)
@@ -83,7 +76,9 @@ namespace Practice.Windows
                     {
                         //TODO: Лучше избигать таких конструкция, они портят читаемость
                         if (!menuGroup.MenuItems?.Any() ?? true)
+                        {
                             continue;
+                        }
 
                         if (menuItem.Title.Contains("Задание"))
                         {
