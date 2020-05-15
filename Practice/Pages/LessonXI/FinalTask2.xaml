@@ -16,6 +16,13 @@
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Panel.ZIndex" Value="99" />
                 </Trigger>
+
+                <EventTrigger RoutedEvent="MouseEnter">
+                    
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    
+                </EventTrigger>
             </Style.Triggers>
         </Style>
     </Page.Resources>

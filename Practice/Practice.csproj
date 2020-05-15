@@ -223,6 +223,9 @@
     <Compile Include="Pages\LessonXI\MySlider.xaml.cs">
       <DependentUpon>MySlider.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\LessonXI\PhotoCard.xaml.cs">
+      <DependentUpon>PhotoCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LessonXI\Valve.xaml.cs">
       <DependentUpon>Valve.xaml</DependentUpon>
     </Compile>
@@ -495,6 +498,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\LessonXI\MySlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LessonXI\PhotoCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
